@@ -1,0 +1,66 @@
+/* src/app/layout/sidebar/sidebar.component.css */
+
+/* --- Estilo da Sidebar --- */
+.sidebar {
+    width: 260px;
+    height: 100vh; /* Ocupa a altura total da tela */
+    background: linear-gradient(180deg, #1C1C21, #111113);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #2c2c34;
+    transition: width 0.3s ease; /* Para futuras animações de recolher */
+}
+
+/* --- Cabeçalho da Sidebar --- */
+.sidebar-header {
+    padding: 25px;
+    text-align: center;
+    border-bottom: 1px solid #2c2c34;
+    color: #FFFFFF;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* --- Lista de Navegação --- */
+.nav-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    flex-grow: 1; /* Faz a lista ocupar o espaço restante */
+}
+
+/* --- Links de Navegação --- */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    margin: 5px 10px;
+    color: #EAEAEA;
+    text-decoration: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link i {
+    font-size: 1.1em;
+    width: 30px; /* Garante alinhamento do texto */
+    margin-right: 15px;
+    text-align: center;
+}
+
+/* --- Efeitos de Hover e Active --- */
+.nav-link:hover {
+    background-color: #5A3E8A; /* Roxo para hover */
+    color: #FFFFFF;
+}
+
+/* O Angular adiciona esta classe 'active' automaticamente! */
+.nav-link.active {
+    background-color: #5A3E8A;
+    color: #FFFFFF;
+    box-shadow: 0 0 15px rgba(138, 86, 224, 0.4); /* Efeito de brilho roxo */
+}
