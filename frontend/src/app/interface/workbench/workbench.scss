@@ -3,8 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: calc(100vh - 64px); 
-  padding: 2rem 4rem;
+  min-height: calc(100vh - 64px);
+  padding: 0rem 4rem;
   background: linear-gradient(to right, #f9fafb, #f3f4f6);
 }
 
@@ -16,13 +16,13 @@
 .home-title {
   font-size: 3rem;
   font-weight: bold;
-  color: #1f2937; 
+  color: #1f2937;
   margin-bottom: 1rem;
 }
 
 .home-subtitle {
   font-size: 1.25rem;
-  color: #4b5563; 
+  color: #4b5563;
   margin-bottom: 2rem;
 }
 
@@ -30,7 +30,7 @@
   display: inline-block;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background-color: #3b82f6; 
+  background-color: #7B466A;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -39,7 +39,7 @@
 }
 
 .home-button:hover {
-  background-color: #2563eb; 
+  background-color: #5D3C64;
 }
 
 .home-image {
