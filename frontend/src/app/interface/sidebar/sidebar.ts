@@ -22,7 +22,7 @@ menuItems = [
     },
     {
       path: '/projetos-locais',
-      icon: 'fa-solid fa-folder-arrow-down',
+      icon: 'fa-solid fa-download',
       label: 'Projetos Locais'
     },
     {
