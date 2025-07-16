@@ -22,6 +22,49 @@
   color: #D391B0;
 }
 
+.nav-buttons {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: stretch;
+  flex-wrap: wrap; 
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-button {
+  flex: 1 1 0; 
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #BA6E8F;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-button i {
+ // margin-right: 15px;
+  text-align: center;
+}
+
+.nav-button:hover {
+  background-color: #5D3C64;
+  color: #D391B0;
+}
+
+
+.nav-button.active i {
+  color: #ffffff;
+}
 .nav-list {
   list-style: none;
   padding: 0;

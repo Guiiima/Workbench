@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { GithubService } from '../../../core/services/github.service';
+import { Repo } from '../../../shared/models/repo';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.scss'
 })
 export class Sidebar {
-menuItems = [
+  menuItems = [
     {
       path: '/dashboard',
       icon: 'fa-solid fa-house',
@@ -31,4 +33,12 @@ menuItems = [
       label: 'Configurações'
     }
   ];
+  private githubService = inject(GithubService);
+  list: Repo[] = [];
+  ngOnInit() {
+    this.githubService.getRepos().subscribe((repos: Repo[]) => {
+      this.list = repos;
+      console.log('Repositórios obtidos:', this.list);
+    });
+  }
 }

@@ -8,15 +8,21 @@
     <h3>WorkEspace</h3>
   </div>
 
+  <div class="nav-buttons">
+    <button *ngFor="let item of menuItems"
+            [routerLink]="item.path"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            [title]="item.label"
+            class="nav-button">
+      <i [class]="item.icon"></i>
+    </button>
+  </div>
   <ul class="nav-list">
-    <li *ngFor="let item of menuItems">
-
-      <a class="nav-link"
-         [routerLink]="item.path"
-         routerLinkActive="active"
-         [routerLinkActiveOptions]="{exact: item.path === '/dashboard' ? true : false}">
-
-        <i [class]="item.icon"></i> <span class="nav-text">{{ item.label }}</span> </a>
+    <li *ngFor="let item of list">
+      <a class="nav-link">  <!-- dica: tooltip com o path -->
+        <span>{{item.name}}</span>
+      </a>
     </li>
   </ul>
 </nav>
